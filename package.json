@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"micro",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "micro",
+    "description": "api documentation for [micro (v7.3.0)](https://github.com/zeit/micro#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-micro.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-micro) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-micro.svg)](https://travis-ci.org/npmdoc/node-npmdoc-micro)",
     "devDependencies": {
-        "micro": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "micro": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-micro",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-micro",
+    "keywords": [
+        "documentation",
+        "micro"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_micro.js",
+    "name": "npmdoc-micro",
+    "nameAlias": "npmdoc_micro",
+    "nameOriginal": "npmdoc-micro",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-micro.git"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
