@@ -51,7 +51,7 @@
 
         href="https://github.com/zeit/micro#readme"
 
-    >micro (v7.3.0)</a>
+    >micro (v7.3.2)</a>
 </h1>
 <h4>Asynchronous HTTP microservices</h4>
 <div class="apidocSectionDiv"><a
@@ -60,6 +60,15 @@
 ><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.micro">module micro</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.micro.micro">
+            function <span class="apidocSignatureSpan"></span>micro
+            <span class="apidocSignatureSpan">((req, res)</span>
+            </a>
+
+        </li>
 
         <li>
 
@@ -84,6 +93,15 @@
             <a class="apidocElementLiA" href="#apidoc.element.micro.json">
             function <span class="apidocSignatureSpan">micro.</span>json
             <span class="apidocSignatureSpan">(req, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.micro.module">
+            function <span class="apidocSignatureSpan">micro.</span>module
+            <span class="apidocSignatureSpan">(file)</span>
             </a>
 
         </li>
@@ -117,9 +135,144 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.micro.server">
+            function <span class="apidocSignatureSpan">micro.</span>server
+            <span class="apidocSignatureSpan">((req, res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.micro.text">
             function <span class="apidocSignatureSpan">micro.</span>text
             <span class="apidocSignatureSpan">(req, { limit, encoding } = {})</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.micro.toString">
+            function <span class="apidocSignatureSpan">micro.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.micro.buffer">module micro.buffer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.micro.buffer.buffer">
+            function <span class="apidocSignatureSpan">micro.</span>buffer
+            <span class="apidocSignatureSpan">(req, { limit = &#x27;1mb&#x27;, encoding } = {})</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.micro.createError">module micro.createError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.micro.createError.createError">
+            function <span class="apidocSignatureSpan">micro.</span>createError
+            <span class="apidocSignatureSpan">(code, msg, orig)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.micro.json">module micro.json</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.micro.json.json">
+            function <span class="apidocSignatureSpan">micro.</span>json
+            <span class="apidocSignatureSpan">(req, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.micro.module">module micro.module</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.micro.module.module">
+            function <span class="apidocSignatureSpan">micro.</span>module
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.micro.run">module micro.run</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.micro.run.run">
+            function <span class="apidocSignatureSpan">micro.</span>run
+            <span class="apidocSignatureSpan">(req, res, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.micro.send">module micro.send</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.micro.send.send">
+            function <span class="apidocSignatureSpan">micro.</span>send
+            <span class="apidocSignatureSpan">(res, code, obj = null)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.micro.sendError">module micro.sendError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.micro.sendError.sendError">
+            function <span class="apidocSignatureSpan">micro.</span>sendError
+            <span class="apidocSignatureSpan">(req, res, { statusCode, status, message, stack })</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.micro.text">module micro.text</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.micro.text.text">
+            function <span class="apidocSignatureSpan">micro.</span>text
+            <span class="apidocSignatureSpan">(req, { limit, encoding } = {})</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.micro.toString">module micro.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.micro.toString.toString">
+            function <span class="apidocSignatureSpan">micro.</span>toString
+            <span class="apidocSignatureSpan">()</span>
             </a>
 
         </li>
@@ -130,6 +283,19 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.micro" id="apidoc.module.micro">module micro</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.micro.micro" id="apidoc.element.micro.micro">
+        function <span class="apidocSignatureSpan"></span>micro
+        <span class="apidocSignatureSpan">((req, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fn =&#x3e; server((req, res) =&#x3e; exports.run(req, res, fn))</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
@@ -198,6 +364,44 @@ Promise.resolve().then(() =&#x3e; {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">(req, opts) =&#x3e;
 exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.micro.module" id="apidoc.element.micro.module">
+        function <span class="apidocSignatureSpan">micro.</span>module
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">file =&#x3e; {
+  let mod;
+
+  try {
+    // eslint-disable-next-line import/no-dynamic-require
+    mod = require(file);
+
+    if (mod &#x26;&#x26; typeof mod === &#x27;object&#x27;) {
+      mod = mod.default;
+    }
+  } catch (err) {
+    console.error(`micro: Error when importing ${file}: ${err.stack}`);
+
+    // eslint-disable-next-line unicorn/no-process-exit
+    process.exit(1);
+  }
+
+  if (typeof mod !== &#x27;function&#x27;) {
+    console.error(`micro: &#x22;${file}&#x22; does not export a function.`);
+
+    // eslint-disable-next-line unicorn/no-process-exit
+    process.exit(1);
+  }
+
+  return mod;
+}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -334,6 +538,19 @@ const body = await request(url)
 
 
     <h2>
+        <a href="#apidoc.element.micro.server" id="apidoc.element.micro.server">
+        function <span class="apidocSignatureSpan">micro.</span>server
+        <span class="apidocSignatureSpan">((req, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fn =&#x3e; server((req, res) =&#x3e; exports.run(req, res, fn))</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
         <a href="#apidoc.element.micro.text" id="apidoc.element.micro.text">
         function <span class="apidocSignatureSpan">micro.</span>text
         <span class="apidocSignatureSpan">(req, { limit, encoding } = {})</span>
@@ -344,6 +561,334 @@ const body = await request(url)
 exports
   .buffer(req, { limit, encoding })
   .then(body =&#x3e; body.toString(encoding))</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.micro.toString" id="apidoc.element.micro.toString">
+        function <span class="apidocSignatureSpan">micro.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.micro.buffer" id="apidoc.module.micro.buffer">module micro.buffer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.micro.buffer.buffer" id="apidoc.element.micro.buffer.buffer">
+        function <span class="apidocSignatureSpan">micro.</span>buffer
+        <span class="apidocSignatureSpan">(req, { limit = &#x27;1mb&#x27;, encoding } = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(req, { limit = &#x27;1mb&#x27;, encoding } = {}) =&#x3e;
+Promise.resolve().then(() =&#x3e; {
+  const type = req.headers[&#x27;content-type&#x27;] || &#x27;text/plain&#x27;;
+  const length = req.headers[&#x27;content-length&#x27;];
+  encoding = encoding === undefined
+    ? typer.parse(type).parameters.charset
+    : encoding;
+
+  const body = rawBodyMap.get(req);
+
+  if (body) {
+    return body;
+  }
+
+  return getRawBody(req, { limit, length, encoding })
+    .then(buf =&#x3e; {
+      rawBodyMap.set(req, buf);
+      return buf;
+    })
+    .catch(err =&#x3e; {
+      if (err.type === &#x27;entity.too.large&#x27;) {
+        throw createError(413, `Body exceeded ${limit} limit`, err);
+      } else {
+        throw createError(400, &#x27;Invalid body&#x27;, err);
+      }
+    });
+})</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.micro.createError" id="apidoc.module.micro.createError">module micro.createError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.micro.createError.createError" id="apidoc.element.micro.createError.createError">
+        function <span class="apidocSignatureSpan">micro.</span>createError
+        <span class="apidocSignatureSpan">(code, msg, orig)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createError(code, msg, orig) {
+  const err = new Error(msg);
+  err.statusCode = code;
+  err.originalError = orig;
+  return err;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.micro.json" id="apidoc.module.micro.json">module micro.json</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.micro.json.json" id="apidoc.element.micro.json.json">
+        function <span class="apidocSignatureSpan">micro.</span>json
+        <span class="apidocSignatureSpan">(req, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(req, opts) =&#x3e;
+exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.micro.module" id="apidoc.module.micro.module">module micro.module</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.micro.module.module" id="apidoc.element.micro.module.module">
+        function <span class="apidocSignatureSpan">micro.</span>module
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">file =&#x3e; {
+  let mod;
+
+  try {
+    // eslint-disable-next-line import/no-dynamic-require
+    mod = require(file);
+
+    if (mod &#x26;&#x26; typeof mod === &#x27;object&#x27;) {
+      mod = mod.default;
+    }
+  } catch (err) {
+    console.error(`micro: Error when importing ${file}: ${err.stack}`);
+
+    // eslint-disable-next-line unicorn/no-process-exit
+    process.exit(1);
+  }
+
+  if (typeof mod !== &#x27;function&#x27;) {
+    console.error(`micro: &#x22;${file}&#x22; does not export a function.`);
+
+    // eslint-disable-next-line unicorn/no-process-exit
+    process.exit(1);
+  }
+
+  return mod;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.micro.run" id="apidoc.module.micro.run">module micro.run</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.micro.run.run" id="apidoc.element.micro.run.run">
+        function <span class="apidocSignatureSpan">micro.</span>run
+        <span class="apidocSignatureSpan">(req, res, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(req, res, fn) =&#x3e;
+  new Promise(resolve =&#x3e; resolve(fn(req, res)))
+.then(val =&#x3e; {
+  if (val === null) {
+    send(res, 204, null);
+    return;
+  }
+
+  // Send value if it is not undefined, otherwise assume res.end
+  // will be called later
+  if (undefined !== val) {
+    send(res, res.statusCode || 200, val);
+  }
+})
+.catch(err =&#x3e; sendError(req, res, err))</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.micro.send" id="apidoc.module.micro.send">module micro.send</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.micro.send.send" id="apidoc.element.micro.send.send">
+        function <span class="apidocSignatureSpan">micro.</span>send
+        <span class="apidocSignatureSpan">(res, code, obj = null)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function send(res, code, obj = null) {
+  res.statusCode = code;
+
+  if (obj === null) {
+    res.end();
+    return;
+  }
+
+  if (Buffer.isBuffer(obj)) {
+    if (!res.getHeader(&#x27;Content-Type&#x27;)) {
+      res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/octet-stream&#x27;);
+    }
+
+    res.setHeader(&#x27;Content-Length&#x27;, obj.length);
+    res.end(obj);
+    return;
+  }
+
+  if (isStream(obj)) {
+    if (!res.getHeader(&#x27;Content-Type&#x27;)) {
+      res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/octet-stream&#x27;);
+    }
+
+    obj.pipe(res);
+    return;
+  }
+
+  let str = obj;
+
+  if (typeof obj === &#x27;object&#x27; || typeof obj === &#x27;number&#x27;) {
+    // We stringify before setting the header
+    // in case `JSON.stringify` throws and a
+    // 500 has to be sent instead
+
+    // the `JSON.stringify` call is split into
+    // two cases as `JSON.stringify` is optimized
+    // in V8 if called with only one argument
+    if (DEV) {
+      str = JSON.stringify(obj, null, 2);
+    } else {
+      str = JSON.stringify(obj);
+    }
+
+    if (!res.getHeader(&#x27;Content-Type&#x27;)) {
+      res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);
+    }
+  }
+
+  res.setHeader(&#x27;Content-Length&#x27;, Buffer.byteLength(str));
+  res.end(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const micro = require(&#x27;micro&#x27;)
+const test = require(&#x27;ava&#x27;)
+const listen = require(&#x27;test-listen&#x27;)
+const request = require(&#x27;request-promise&#x27;)
+
+test(&#x27;my endpoint&#x27;, async t =&#x3e; {
+const service = micro(async (req, res) =&#x3e; {
+  micro.<span class="apidocCodeKeywordSpan">send</span>(res, 200, {
+    test: &#x27;woot&#x27;
+  })
+})
+
+const url = await listen(service)
+const body = await request(url)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.micro.sendError" id="apidoc.module.micro.sendError">module micro.sendError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.micro.sendError.sendError" id="apidoc.element.micro.sendError.sendError">
+        function <span class="apidocSignatureSpan">micro.</span>sendError
+        <span class="apidocSignatureSpan">(req, res, { statusCode, status, message, stack })</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sendError(req, res, { statusCode, status, message, stack }) {
+  statusCode = statusCode || status;
+
+  if (statusCode) {
+    send(res, statusCode, DEV ? stack : message);
+  } else {
+    send(res, 500, DEV ? stack : &#x27;Internal Server Error&#x27;);
+  }
+
+  if (!TESTING) {
+    console.error(stack);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.micro.text" id="apidoc.module.micro.text">module micro.text</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.micro.text.text" id="apidoc.element.micro.text.text">
+        function <span class="apidocSignatureSpan">micro.</span>text
+        <span class="apidocSignatureSpan">(req, { limit, encoding } = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(req, { limit, encoding } = {}) =&#x3e;
+exports
+  .buffer(req, { limit, encoding })
+  .then(body =&#x3e; body.toString(encoding))</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.micro.toString" id="apidoc.module.micro.toString">module micro.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.micro.toString.toString" id="apidoc.element.micro.toString.toString">
+        function <span class="apidocSignatureSpan">micro.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 

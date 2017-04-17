@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/zeit/micro#readme"
-
-    >micro (v7.3.2)</a>
+    <a href="https://github.com/zeit/micro#readme">micro (v7.3.2)</a>
 </h1>
 <h4>Asynchronous HTTP microservices</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.micro">module micro</a><ol>
 
@@ -74,7 +67,7 @@
 
             <a class="apidocElementLiA" href="#apidoc.element.micro.buffer">
             function <span class="apidocSignatureSpan">micro.</span>buffer
-            <span class="apidocSignatureSpan">(req, { limit = &#x27;1mb&#x27;, encoding } = {})</span>
+            <span class="apidocSignatureSpan">(req, { limit = '1mb', encoding } = {})</span>
             </a>
 
         </li>
@@ -168,7 +161,7 @@
 
             <a class="apidocElementLiA" href="#apidoc.element.micro.buffer.buffer">
             function <span class="apidocSignatureSpan">micro.</span>buffer
-            <span class="apidocSignatureSpan">(req, { limit = &#x27;1mb&#x27;, encoding } = {})</span>
+            <span class="apidocSignatureSpan">(req, { limit = '1mb', encoding } = {})</span>
             </a>
 
         </li>
@@ -292,7 +285,7 @@
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">fn =&#x3e; server((req, res) =&#x3e; exports.run(req, res, fn))</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">fn =&gt; server((req, res) =&gt; exports.run(req, res, fn))</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -301,14 +294,14 @@
     <h2>
         <a href="#apidoc.element.micro.buffer" id="apidoc.element.micro.buffer">
         function <span class="apidocSignatureSpan">micro.</span>buffer
-        <span class="apidocSignatureSpan">(req, { limit = &#x27;1mb&#x27;, encoding } = {})</span>
+        <span class="apidocSignatureSpan">(req, { limit = '1mb', encoding } = {})</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">(req, { limit = &#x27;1mb&#x27;, encoding } = {}) =&#x3e;
-Promise.resolve().then(() =&#x3e; {
-  const type = req.headers[&#x27;content-type&#x27;] || &#x27;text/plain&#x27;;
-  const length = req.headers[&#x27;content-length&#x27;];
+    <li>description and source-code<pre class="apidocCodePre">(req, { limit = '1mb', encoding } = {}) =&gt;
+Promise.resolve().then(() =&gt; {
+  const type = req.headers['content-type'] || 'text/plain';
+  const length = req.headers['content-length'];
   encoding = encoding === undefined
     ? typer.parse(type).parameters.charset
     : encoding;
@@ -320,15 +313,15 @@ Promise.resolve().then(() =&#x3e; {
   }
 
   return getRawBody(req, { limit, length, encoding })
-    .then(buf =&#x3e; {
+    .then(buf =&gt; {
       rawBodyMap.set(req, buf);
       return buf;
     })
-    .catch(err =&#x3e; {
-      if (err.type === &#x27;entity.too.large&#x27;) {
+    .catch(err =&gt; {
+      if (err.type === 'entity.too.large') {
         throw createError(413, `Body exceeded ${limit} limit`, err);
       } else {
-        throw createError(400, &#x27;Invalid body&#x27;, err);
+        throw createError(400, 'Invalid body', err);
       }
     });
 })</pre></li>
@@ -362,8 +355,8 @@ Promise.resolve().then(() =&#x3e; {
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">(req, opts) =&#x3e;
-exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">(req, opts) =&gt;
+exports.text(req, opts).then(body =&gt; parseJSON(body))</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -376,14 +369,14 @@ exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">file =&#x3e; {
+    <li>description and source-code<pre class="apidocCodePre">file =&gt; {
   let mod;
 
   try {
     // eslint-disable-next-line import/no-dynamic-require
     mod = require(file);
 
-    if (mod &#x26;&#x26; typeof mod === &#x27;object&#x27;) {
+    if (mod &amp;&amp; typeof mod === 'object') {
       mod = mod.default;
     }
   } catch (err) {
@@ -393,8 +386,8 @@ exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
     process.exit(1);
   }
 
-  if (typeof mod !== &#x27;function&#x27;) {
-    console.error(`micro: &#x22;${file}&#x22; does not export a function.`);
+  if (typeof mod !== 'function') {
+    console.error(`micro: "${file}" does not export a function.`);
 
     // eslint-disable-next-line unicorn/no-process-exit
     process.exit(1);
@@ -414,9 +407,9 @@ exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">(req, res, fn) =&#x3e;
-  new Promise(resolve =&#x3e; resolve(fn(req, res)))
-.then(val =&#x3e; {
+    <li>description and source-code<pre class="apidocCodePre">(req, res, fn) =&gt;
+  new Promise(resolve =&gt; resolve(fn(req, res)))
+.then(val =&gt; {
   if (val === null) {
     send(res, 204, null);
     return;
@@ -428,7 +421,7 @@ exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
     send(res, res.statusCode || 200, val);
   }
 })
-.catch(err =&#x3e; sendError(req, res, err))</pre></li>
+.catch(err =&gt; sendError(req, res, err))</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -450,18 +443,18 @@ exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
   }
 
   if (Buffer.isBuffer(obj)) {
-    if (!res.getHeader(&#x27;Content-Type&#x27;)) {
-      res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/octet-stream&#x27;);
+    if (!res.getHeader('Content-Type')) {
+      res.setHeader('Content-Type', 'application/octet-stream');
     }
 
-    res.setHeader(&#x27;Content-Length&#x27;, obj.length);
+    res.setHeader('Content-Length', obj.length);
     res.end(obj);
     return;
   }
 
   if (isStream(obj)) {
-    if (!res.getHeader(&#x27;Content-Type&#x27;)) {
-      res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/octet-stream&#x27;);
+    if (!res.getHeader('Content-Type')) {
+      res.setHeader('Content-Type', 'application/octet-stream');
     }
 
     obj.pipe(res);
@@ -470,7 +463,7 @@ exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
 
   let str = obj;
 
-  if (typeof obj === &#x27;object&#x27; || typeof obj === &#x27;number&#x27;) {
+  if (typeof obj === 'object' || typeof obj === 'number') {
     // We stringify before setting the header
     // in case `JSON.stringify` throws and a
     // 500 has to be sent instead
@@ -484,24 +477,24 @@ exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
       str = JSON.stringify(obj);
     }
 
-    if (!res.getHeader(&#x27;Content-Type&#x27;)) {
-      res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);
+    if (!res.getHeader('Content-Type')) {
+      res.setHeader('Content-Type', 'application/json');
     }
   }
 
-  res.setHeader(&#x27;Content-Length&#x27;, Buffer.byteLength(str));
+  res.setHeader('Content-Length', Buffer.byteLength(str));
   res.end(str);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-const micro = require(&#x27;micro&#x27;)
-const test = require(&#x27;ava&#x27;)
-const listen = require(&#x27;test-listen&#x27;)
-const request = require(&#x27;request-promise&#x27;)
+const micro = require('micro')
+const test = require('ava')
+const listen = require('test-listen')
+const request = require('request-promise')
 
-test(&#x27;my endpoint&#x27;, async t =&#x3e; {
-const service = micro(async (req, res) =&#x3e; {
+test('my endpoint', async t =&gt; {
+const service = micro(async (req, res) =&gt; {
   micro.<span class="apidocCodeKeywordSpan">send</span>(res, 200, {
-    test: &#x27;woot&#x27;
+    test: 'woot'
   })
 })
 
@@ -525,7 +518,7 @@ const body = await request(url)
   if (statusCode) {
     send(res, statusCode, DEV ? stack : message);
   } else {
-    send(res, 500, DEV ? stack : &#x27;Internal Server Error&#x27;);
+    send(res, 500, DEV ? stack : 'Internal Server Error');
   }
 
   if (!TESTING) {
@@ -544,7 +537,7 @@ const body = await request(url)
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">fn =&#x3e; server((req, res) =&#x3e; exports.run(req, res, fn))</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">fn =&gt; server((req, res) =&gt; exports.run(req, res, fn))</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -557,10 +550,10 @@ const body = await request(url)
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">(req, { limit, encoding } = {}) =&#x3e;
+    <li>description and source-code<pre class="apidocCodePre">(req, { limit, encoding } = {}) =&gt;
 exports
   .buffer(req, { limit, encoding })
-  .then(body =&#x3e; body.toString(encoding))</pre></li>
+  .then(body =&gt; body.toString(encoding))</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -589,14 +582,14 @@ exports
     <h2>
         <a href="#apidoc.element.micro.buffer.buffer" id="apidoc.element.micro.buffer.buffer">
         function <span class="apidocSignatureSpan">micro.</span>buffer
-        <span class="apidocSignatureSpan">(req, { limit = &#x27;1mb&#x27;, encoding } = {})</span>
+        <span class="apidocSignatureSpan">(req, { limit = '1mb', encoding } = {})</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">(req, { limit = &#x27;1mb&#x27;, encoding } = {}) =&#x3e;
-Promise.resolve().then(() =&#x3e; {
-  const type = req.headers[&#x27;content-type&#x27;] || &#x27;text/plain&#x27;;
-  const length = req.headers[&#x27;content-length&#x27;];
+    <li>description and source-code<pre class="apidocCodePre">(req, { limit = '1mb', encoding } = {}) =&gt;
+Promise.resolve().then(() =&gt; {
+  const type = req.headers['content-type'] || 'text/plain';
+  const length = req.headers['content-length'];
   encoding = encoding === undefined
     ? typer.parse(type).parameters.charset
     : encoding;
@@ -608,15 +601,15 @@ Promise.resolve().then(() =&#x3e; {
   }
 
   return getRawBody(req, { limit, length, encoding })
-    .then(buf =&#x3e; {
+    .then(buf =&gt; {
       rawBodyMap.set(req, buf);
       return buf;
     })
-    .catch(err =&#x3e; {
-      if (err.type === &#x27;entity.too.large&#x27;) {
+    .catch(err =&gt; {
+      if (err.type === 'entity.too.large') {
         throw createError(413, `Body exceeded ${limit} limit`, err);
       } else {
-        throw createError(400, &#x27;Invalid body&#x27;, err);
+        throw createError(400, 'Invalid body', err);
       }
     });
 })</pre></li>
@@ -660,8 +653,8 @@ Promise.resolve().then(() =&#x3e; {
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">(req, opts) =&#x3e;
-exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">(req, opts) =&gt;
+exports.text(req, opts).then(body =&gt; parseJSON(body))</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -679,14 +672,14 @@ exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">file =&#x3e; {
+    <li>description and source-code<pre class="apidocCodePre">file =&gt; {
   let mod;
 
   try {
     // eslint-disable-next-line import/no-dynamic-require
     mod = require(file);
 
-    if (mod &#x26;&#x26; typeof mod === &#x27;object&#x27;) {
+    if (mod &amp;&amp; typeof mod === 'object') {
       mod = mod.default;
     }
   } catch (err) {
@@ -696,8 +689,8 @@ exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
     process.exit(1);
   }
 
-  if (typeof mod !== &#x27;function&#x27;) {
-    console.error(`micro: &#x22;${file}&#x22; does not export a function.`);
+  if (typeof mod !== 'function') {
+    console.error(`micro: "${file}" does not export a function.`);
 
     // eslint-disable-next-line unicorn/no-process-exit
     process.exit(1);
@@ -722,9 +715,9 @@ exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">(req, res, fn) =&#x3e;
-  new Promise(resolve =&#x3e; resolve(fn(req, res)))
-.then(val =&#x3e; {
+    <li>description and source-code<pre class="apidocCodePre">(req, res, fn) =&gt;
+  new Promise(resolve =&gt; resolve(fn(req, res)))
+.then(val =&gt; {
   if (val === null) {
     send(res, 204, null);
     return;
@@ -736,7 +729,7 @@ exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
     send(res, res.statusCode || 200, val);
   }
 })
-.catch(err =&#x3e; sendError(req, res, err))</pre></li>
+.catch(err =&gt; sendError(req, res, err))</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -763,18 +756,18 @@ exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
   }
 
   if (Buffer.isBuffer(obj)) {
-    if (!res.getHeader(&#x27;Content-Type&#x27;)) {
-      res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/octet-stream&#x27;);
+    if (!res.getHeader('Content-Type')) {
+      res.setHeader('Content-Type', 'application/octet-stream');
     }
 
-    res.setHeader(&#x27;Content-Length&#x27;, obj.length);
+    res.setHeader('Content-Length', obj.length);
     res.end(obj);
     return;
   }
 
   if (isStream(obj)) {
-    if (!res.getHeader(&#x27;Content-Type&#x27;)) {
-      res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/octet-stream&#x27;);
+    if (!res.getHeader('Content-Type')) {
+      res.setHeader('Content-Type', 'application/octet-stream');
     }
 
     obj.pipe(res);
@@ -783,7 +776,7 @@ exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
 
   let str = obj;
 
-  if (typeof obj === &#x27;object&#x27; || typeof obj === &#x27;number&#x27;) {
+  if (typeof obj === 'object' || typeof obj === 'number') {
     // We stringify before setting the header
     // in case `JSON.stringify` throws and a
     // 500 has to be sent instead
@@ -797,24 +790,24 @@ exports.text(req, opts).then(body =&#x3e; parseJSON(body))</pre></li>
       str = JSON.stringify(obj);
     }
 
-    if (!res.getHeader(&#x27;Content-Type&#x27;)) {
-      res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);
+    if (!res.getHeader('Content-Type')) {
+      res.setHeader('Content-Type', 'application/json');
     }
   }
 
-  res.setHeader(&#x27;Content-Length&#x27;, Buffer.byteLength(str));
+  res.setHeader('Content-Length', Buffer.byteLength(str));
   res.end(str);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-const micro = require(&#x27;micro&#x27;)
-const test = require(&#x27;ava&#x27;)
-const listen = require(&#x27;test-listen&#x27;)
-const request = require(&#x27;request-promise&#x27;)
+const micro = require('micro')
+const test = require('ava')
+const listen = require('test-listen')
+const request = require('request-promise')
 
-test(&#x27;my endpoint&#x27;, async t =&#x3e; {
-const service = micro(async (req, res) =&#x3e; {
+test('my endpoint', async t =&gt; {
+const service = micro(async (req, res) =&gt; {
   micro.<span class="apidocCodeKeywordSpan">send</span>(res, 200, {
-    test: &#x27;woot&#x27;
+    test: 'woot'
   })
 })
 
@@ -843,7 +836,7 @@ const body = await request(url)
   if (statusCode) {
     send(res, statusCode, DEV ? stack : message);
   } else {
-    send(res, 500, DEV ? stack : &#x27;Internal Server Error&#x27;);
+    send(res, 500, DEV ? stack : 'Internal Server Error');
   }
 
   if (!TESTING) {
@@ -867,10 +860,10 @@ const body = await request(url)
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">(req, { limit, encoding } = {}) =&#x3e;
+    <li>description and source-code<pre class="apidocCodePre">(req, { limit, encoding } = {}) =&gt;
 exports
   .buffer(req, { limit, encoding })
-  .then(body =&#x3e; body.toString(encoding))</pre></li>
+  .then(body =&gt; body.toString(encoding))</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -901,3 +894,4 @@ exports
     ]
 </div>
 </div>
+</body></html>
