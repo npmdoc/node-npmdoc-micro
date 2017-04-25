@@ -1,4 +1,7 @@
-# api documentation for  [micro (v7.3.2)](https://github.com/zeit/micro#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-micro.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-micro) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-micro.svg)](https://travis-ci.org/npmdoc/node-npmdoc-micro)
+# npmdoc-micro
+
+#### basic api documentation for  [micro (v7.3.2)](https://github.com/zeit/micro#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-micro.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-micro) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-micro.svg)](https://travis-ci.org/npmdoc/node-npmdoc-micro)
+
 #### Asynchronous HTTP microservices
 
 [![NPM](https://nodei.co/npm/micro.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/micro)
